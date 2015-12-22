@@ -5,42 +5,19 @@
  */
 package org.umss.sisii.minisis.model;
 
+import java.sql.Date;
+
 /**
  *
- * @author PC_
+ * @author Anthony
  */
 public class Task {
-    
+
     private int id;
     private String taskName;
     private String description;
     private String startDate;
     private String endDate;
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 47 * hash + this.id;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Task other = (Task) obj;
-        if (this.id != other.id) {
-            return false;
-        }
-        return true;
-    }
 
     public int getId() {
         return id;
@@ -81,8 +58,5 @@ public class Task {
     public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
-    
-    
+
 }
-
-

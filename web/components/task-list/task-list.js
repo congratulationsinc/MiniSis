@@ -7,18 +7,16 @@
     
     function TaskListController(UserService) {
         var vm = this;
-        vm.task = {
-            title: 'task1',
-            description: 'first task'
-        };
+        vm.tasks = [];
         
-        vm.getTasks = function () {
-            var tasks = [];
             UserService.getTasks(onSuccess, onError);
+        vm.getTasks = function () {
         };
 
-        function onSuccess() {
+        function onSuccess(data) {
+            vm.tasks = data.data;
             console.log("Se recuperaron las tareas");
+            console.log(vm.tasks);
         };
 
         function onError() {

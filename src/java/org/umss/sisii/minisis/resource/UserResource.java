@@ -1,10 +1,13 @@
 package org.umss.sisii.minisis.resource;
 
+import java.util.List;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.umss.sisii.minisis.database.DBManager;
+import org.umss.sisii.minisis.model.Task;
 import org.umss.sisii.minisis.model.User;
 
 /*
@@ -28,5 +31,10 @@ public class UserResource {
             return user;
         }
         throw new IllegalStateException("ahhhh...");
+    }
+    
+    @GET
+    public List<Task> getAllTasks() {
+        return manager.getAllTasks();
     }
 }

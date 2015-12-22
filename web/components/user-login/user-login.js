@@ -23,13 +23,10 @@
             console.log("... " + data.data.userPassword);
             console.log("... " + data.data.id);
             console.log(data);
-        }
-        ;
+        };
 
         function onError() {
             console.log("User not exist!");
-        }
-        ;
-    }
-    ;
+        };
+    };
 })();

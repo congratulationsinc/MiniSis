@@ -24,7 +24,7 @@
         function getTasks(onSuccess, onError) {
             $http({
                 method: 'GET',
-                url: 'http://localhost:8080/minisissII/api/user/',
+                url: 'http://localhost:8080/minisissII/api/user/'
             }).then(onSuccess, onError);
         };
         return service;

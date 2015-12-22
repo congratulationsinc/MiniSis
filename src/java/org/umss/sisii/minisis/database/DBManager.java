@@ -5,8 +5,16 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.umss.sisii.minisis.model.Task;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 import java.util.List;
 import java.util.ArrayList;
 import org.umss.sisii.minisis.model.Task;
@@ -26,8 +34,8 @@ public class DBManager {
     private final String postgresUser;
 
     private DBManager() {
-        url = "jdbc:postgresql://localhost:5432/MiniSis2";
-        password = "1234";
+        url = "jdbc:postgresql://localhost:5432/MiniSiss";
+        password = "postgresql";
         postgresUser = "postgres";
         conectar();
     }
@@ -68,12 +76,12 @@ public class DBManager {
 
         return isCorrect;
     }
-    
-    public List<Task> getAllTasks(){
-        List<Task> tasks = new ArrayList<Task>();    
+
+    public List<Task> getAllTasks() {
+        List<Task> tasks = new ArrayList<Task>();
         try {
             rs = s.executeQuery("SELECT task_name, task_description, start_date, end_date FROM \"task\";");
-            while(rs.next()){
+            while (rs.next()) {
                 Task task = new Task();
                 task.setTaskName(rs.getString("task_name"));
                 task.setDescription(rs.getString("task_description"));
@@ -84,9 +92,6 @@ public class DBManager {
         } catch (SQLException ex) {
             Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
         return tasks;
     }
-   
 }
