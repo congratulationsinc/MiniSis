@@ -27,7 +27,7 @@ public class UserResource {
 
     @POST
     public User checkUserExample(User user) {
-        if (manager.checkPassword(user.getUserName(), user.getUserPassword())) {
+        if (manager.checkUser(user.getUserName(), user.getUserPassword())) {
             return user;
         }
         throw new IllegalStateException("ahhhh...");

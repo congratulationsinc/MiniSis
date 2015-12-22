@@ -3,6 +3,7 @@
     var modules = [
         'ngNewRouter',
         'app.userLogin',
+        'app.task',
         'app.userService'
     ];
     
@@ -17,6 +18,9 @@
             },
             {
                 path: '/userLogin', component: 'userLogin'
+            },
+            {
+                path: '/taskList', component: 'taskList'
             }
         ]);
     };

@@ -12,10 +12,12 @@ import java.sql.Date;
  * @author Anthony
  */
 public class Task {
+
     private int id;
     private String taskName;
-    private Date startDate;
-    private Date endDate;
+    private String description;
+    private String startDate;
+    private String endDate;
 
     public int getId() {
         return id;
@@ -33,42 +35,28 @@ public class Task {
         this.taskName = taskName;
     }
 
-    public Date getStartDate() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 31 * hash + this.id;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Task other = (Task) obj;
-        if (this.id != other.id) {
-            return false;
-        }
-        return true;
-    }
-    
 }

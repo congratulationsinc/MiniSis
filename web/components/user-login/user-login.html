@@ -1,19 +1,40 @@
-<div id="user-login-template">
-    <div class="w3-container w3-purple w3-animate-top" >
-        <h2 class="w3-jumbo">Sign in</h2>
+<div >
+    <div>
+        <div class="w3-container w3-paragraph w3-theme-l3 w3-xlarge" >
+            <p>platform created to facilitate the submission of tasks concerning Information Systems II</p>
+        </div>
+
+
+        <div class="w3-half" style="padding-left:10px ">
+
+            <video width="95%" height="80%" controls loop autoplay muted>
+                <source src="assets/video/What is agile What is scrum An Introduction.mp4" type="video/mp4">
+                Your browser does not support the <code>video</code> tag.
+            </video>
+        </div>
+
+
+        <div class="w3-half">
+            <div class="w3-container w3-purple w3-animate-top" >
+                <h2 class="w3-xxlarge">Sign in</h2>
+            </div>
+
+
+
+            <form class="w3-container w3-animate-opacity">
+
+                <p>
+                    <label>User name</label>
+                    <input  class="w3-input" ng-model="userLogin.userName" type="text" placeholder="your username " ></p>
+
+                <p>
+                    <label>password</label>
+                    <input class="w3-input" ng-model="userLogin.userPassword" type="password" placeholder="your password"></p>
+                <a ng-href="taskList">
+                <input  class="w3-btn  w3w3-xlarge-round w3-purple w3-border "
+                        type="submit" value="Sign in"  ng-click="userLogin.verifyUser()">
+                </a>
+            </form>
+        </div>
     </div>
-    <form class="w3-container w3-animate-opacity">
-
-        <p>
-            <label>User name</label>
-            <input class="w3-input" ng-model="userLogin.userName" type="text" placeholder="your username " ></p>
-
-        <p>
-            <label>password</label>
-            <input class="w3-input" ng-model="userLogin.userPassword" type="password" placeholder="your password"></p>
-        <input  class="w3-btn  w3w3-xlarge-round w3-purple w3-border "
-                type="submit"
-                value="Sing in"
-                ng-click="userLogin.verifyUser()">
-    </form>
 </div>
