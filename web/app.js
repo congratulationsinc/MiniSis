@@ -7,6 +7,7 @@
         'ngNewRouter',
         'app.userLogin',
         'app.task',
+        'app.userReportcard',
         'app.userService'
     ];
     
@@ -24,6 +25,9 @@
             },
             {
                 path: '/taskList', component: 'taskList'
+            },
+            {
+                path: '/userReportcard', component: 'userReportcard'
             }
         ]);
     };
