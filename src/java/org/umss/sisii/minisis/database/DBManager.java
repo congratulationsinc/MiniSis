@@ -35,7 +35,7 @@ public class DBManager {
 
     private DBManager() {
         url = "jdbc:postgresql://localhost:5432/MiniSiss";
-        password = "postgresql";
+        password = "julio";
         postgresUser = "postgres";
         conectar();
     }

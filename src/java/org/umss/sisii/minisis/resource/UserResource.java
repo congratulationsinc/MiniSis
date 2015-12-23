@@ -1,3 +1,4 @@
+
 package org.umss.sisii.minisis.resource;
 
 import java.util.List;
